@@ -1,7 +1,7 @@
 require "extends_bool/version"
 
 module ExtendsBool
-  FALSE_VALUES = [nil, false, 0, 0.0, "", "0", "f", "F", "false", "FALSE", "off", "OFF", [], {}].to_set
+  FALSE_VALUES = [nil, false, 0, 0.0, "", "0", "f", "F", "false", "FALSE", "off", "OFF", [], {}]
 
   # Returns a boolean value, according the object value.
   #
