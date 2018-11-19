@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = ExtendsBool::VERSION
   spec.authors       = ["André Leoni"]
   spec.email         = ["andreluizleoni@gmail.com"]
-  spec.summary       = %q{Adds `.to_bool` behaviour to String, Integer, Float, Array, Hash, TrueClass, FalseClass and NilClass.}
-  spec.description   = %q{Adds `.to_bool` behaviour to String, Integer, Float, Array, Hash, TrueClass, FalseClass and NilClass.}
+  spec.summary       = %q{Adds ".to_bool" behaviour to String, Integer, Float, Array, Hash, TrueClass, FalseClass and NilClass.}
+  spec.description   = %q{Adds ".to_bool" behaviour to String, Integer, Float, Array, Hash, TrueClass, FalseClass and NilClass.}
   spec.homepage      = "https://github.com/andreleoni/extends_bool"
   spec.license       = "MIT"
 
