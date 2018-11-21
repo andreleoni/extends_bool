@@ -1,5 +1,10 @@
 # Changelog
 
+## Version 0.2.0
+
+* Added the behaviour to ignore case_sensitive to string values, when "f", "false", "off".
+* Added the alias `.to_b`, `.to_boolean` to the default `.to_bool`.
+
 ## Version 0.1.0
 
 First version. Created the `to_bool` behaviour to the follow classes:

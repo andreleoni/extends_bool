@@ -6,40 +6,18 @@ RSpec.describe ExtendsBool do
     expect(ExtendsBool::VERSION).not_to be nil
   end
 
-  it "return bool value according the object value" do
-    # Check for true values
-    expect(true.to_bool).to eq(true)
-    expect(1.to_bool).to eq(true)
-    expect(1.0.to_bool).to eq(true)
-    expect(0.1.to_bool).to eq(true)
-    expect(1.5.to_bool).to eq(true)
-    expect(2.0.to_bool).to eq(true)
-    expect("1".to_bool).to eq(true)
-    expect("t".to_bool).to eq(true)
-    expect("T".to_bool).to eq(true)
-    expect("true".to_bool).to eq(true)
-    expect("TRUE".to_bool).to eq(true)
-    expect("on".to_bool).to eq(true)
-    expect("ON".to_bool).to eq(true)
-    expect(" ".to_bool).to eq(true)
-    expect("\u3000\r\n".to_bool).to eq(true)
-    expect("\u0000".to_bool).to eq(true)
-    expect("SOMETHING RANDOM".to_bool).to eq(true)
+  def truthy_values
+    [true, 1, 1.0, 0.1, 1.5, 2.0, "1", "t", "T", "true", "TRUE", "on", "ON", " ", "\u3000\r\n", "\u0000", "RANDOM"]
+  end
 
-    # Check for false values
-    expect("".to_bool).to eq(false)
-    expect(nil.to_bool).to eq(false)
-    expect(false.to_bool).to eq(false)
-    expect(0.to_bool).to eq(false)
-    expect(0.0.to_bool).to eq(false)
-    expect("0".to_bool).to eq(false)
-    expect("f".to_bool).to eq(false)
-    expect("F".to_bool).to eq(false)
-    expect("false".to_bool).to eq(false)
-    expect("FALSE".to_bool).to eq(false)
-    expect("off".to_bool).to eq(false)
-    expect("OFF".to_bool).to eq(false)
-    expect([].to_bool).to eq(false)
-    expect({}.to_bool).to eq(false)
+  def falsey_values
+    ["", nil, false, 0, 0.0, "0", "f", "F", "false", "FALSE", "fAlSe", "off", "oFf", "OFF", [], {}]
+  end
+
+  it "return bool value according the object value" do
+    [:to_bool, :to_b, :to_boolean].each do |method|
+      truthy_values.each { |v| expect(v.send(method)).to eq(true) }
+      falsey_values.each { |v| expect(v.send(method)).to eq(false) }
+    end
   end
 end
