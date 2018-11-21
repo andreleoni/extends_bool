@@ -23,8 +23,7 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.metadata = {
-    "changelog_uri"     => "https://github.com/andreleoni/extends_bool/CHANGELOG.md",
-    "documentation_uri" => "https://github.com/andreleoni/extends_bool/README.md",
+    "changelog_uri"     => "https://github.com/andreleoni/extends_bool/blob/master/CHANGELOG.md",
     "homepage_uri"      => "https://github.com/andreleoni/extends_bool",
     "source_code_uri"   => "https://github.com/andreleoni/extends_bool"
   }

@@ -1,5 +1,9 @@
 # Changelog
 
+## Version 0.2.1
+
+* Update doc
+
 ## Version 0.2.0
 
 * Added the behaviour to ignore case_sensitive to string values, when "f", "false", "off".
