@@ -22,6 +22,13 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
+  spec.metadata = {
+    "changelog_uri"     => "https://github.com/andreleoni/extends_bool/CHANGELOG.md",
+    "documentation_uri" => "https://github.com/andreleoni/extends_bool/README.md",
+    "homepage_uri"      => "https://github.com/andreleoni/extends_bool",
+    "source_code_uri"   => "https://github.com/andreleoni/extends_bool"
+  }
+
   spec.add_development_dependency "bundler", "~> 1.16"
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "rspec", "~> 3.0"
