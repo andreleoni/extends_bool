@@ -32,7 +32,7 @@ Or install it yourself as:
 
 ## Usage
 
-Simple, if the variable have any of `[nil, false, 0, 0.0, "", "0", "f", "F", "false", "FALSE", "off", "OFF", [], {}]` values, will return `false`, else, returns `true`.
+Simple, if the variable have any of `[nil, false, 0, 0.0, "", "0", "f", "false", "off", [], {}]` values, will return `false`, else, returns `true`.
 
 ## Contributing
 
