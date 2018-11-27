@@ -1,14 +1,14 @@
 language: ruby
 
-rvm:  
+rvm:
   - 2.5.1
 
 notifications:
   email:
     - andreluizleoni@gmail.com
 
-before_install: 
-  - gem install bundler -v 1.16.2
+before_install:
+  - gem install bundler
 
 script:
   - bundle exec rspec
